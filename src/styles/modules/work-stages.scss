@@ -1,0 +1,145 @@
+.work-stages {
+    padding: 24px 0;
+    text-align: center;
+    background: linear-gradient(-90deg, rgba($color-akcent-1, 0.03), rgba($color-akcent-1, 0.08));
+
+    &__heading {
+        margin: 0 0 21px;
+        font: bold 28px/1.2 $main-font;
+        color: $color-akcent-1;
+    }
+
+    &__list {
+        margin: 0 0 34px;
+        padding: 0;
+        list-style-type: none;
+        counter-reset: slide;
+    }
+
+    &__item {
+        outline: none;
+    }
+
+    &__icon-wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 124px;
+        height: 124px;
+        margin: 0 auto 27px;
+        border: 4px solid $color-akcent-1;
+        border-radius: 50%;
+        background: $color-white;
+
+        &:before {
+            content: counter(slide, decimal-leading-zero) " "; 
+            counter-increment: slide;
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            display: block;
+            width: 40px;
+            height: 40px;
+            font: bold 18px/40px $main-font;
+            color: $color-white;
+            text-align: center;
+            border-radius: 50%;
+            background: linear-gradient(45deg, $color-akcent-1 20%, $color-akcent-2 100%);
+        }
+    }
+
+    &__icon {
+        display: block;
+        margin: auto;
+    }
+
+    &__title {
+        margin: 0 0 22px;
+        font: bold 18px/1.2 $main-font;
+        color: $color-black;
+    }
+
+    &__desc {
+        margin: 0;
+        font: normal 14px/1.45 $main-font;
+        color: $color-black;
+    }
+
+    @media (min-width: $screen-tablet) {
+        background: $color-white;
+
+        &__inner {
+            position: relative;
+        }
+
+        &__heading {
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            font-size: 160px;
+            line-height: 1.1;
+            color: rgba($color-akcent-1, 0.1);
+            transform: translateX(-50%);
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__item {
+            flex-basis: auto;
+            width: calc(100% / 3);
+            margin-bottom: 40px;
+        }
+
+        .slider-arrows {
+            display: none;
+        }
+    }
+
+    @media (min-width: $screen-desktop) {
+        background: url(../img/stages-line.svg) no-repeat center -85px /1920px 100%;
+
+        &__heading {
+            max-width: 50%;
+            font-size: 147px;
+            top: -30px;
+            left: 0;
+            text-align: left;
+            transform: none;
+        }
+
+        &__list {
+            padding: 70px 0;
+        }
+
+        &__item {
+            width: calc(100% / 5);
+            margin-bottom: 0;
+
+            &:nth-child(2) {
+                transform: translateY(69px);
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-10px);
+            }
+
+            &:nth-child(4) {
+                transform: translateY(-69px);
+            }
+
+            &:nth-child(5) {
+                transform: translateY(-10px);
+            }
+        }
+    }
+
+    @media (min-width: 1921px ) {
+        background-size: contain;
+        background-position: center 50px;
+    }
+}

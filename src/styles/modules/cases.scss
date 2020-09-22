@@ -1,0 +1,208 @@
+.cases {
+    padding: 30px 0;
+
+    &__heading {
+        margin: 0 0 19px;
+    }
+
+    &__item {
+        outline: none;
+    }
+
+    .slick-slide {
+        .case-card__image {
+            display: none;
+        }
+    }
+
+    @media (min-width: $screen-tablet) {
+        background: linear-gradient(-90deg, rgba($color-akcent-1, 0.03), rgba($color-akcent-1, 0.08));
+
+        &__list {
+            margin-bottom: 10px;
+        }
+
+        &__item {
+            padding: 20px 15px;
+        }
+
+        .slick-slide {
+            .case-card__image {
+                display: block;
+            }
+        }
+    }
+
+    @media (min-width: $screen-desktop) {
+        &__inner {
+            position: relative;
+        }
+
+        &__header {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .slider-arrows__btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .slider-prev-btn {
+            left: -60px;
+        }
+
+        .slider-next-btn {
+            right: -60px;
+        }        
+    }
+}
+
+.case-card {
+    &__title {
+        margin: 0 0 21px;
+        font: bold 24px/1.2 $main-font;
+        color: $color-akcent-1;
+    }
+
+    &__desc {
+        margin-bottom: 42px;
+
+        p {
+            margin: 0 0 9px;
+            font: normal 14px/1.35 $main-font;
+            color: #1b1c20;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 40px;
+    }
+
+    &__service {
+        margin: 0;
+        font: normal 16px/1.2 $main-font;
+        color: $color-akcent-2;
+    }
+
+    &__image {
+        display: none;
+    }
+
+    &__logo-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background: $color-white;
+        box-shadow: 0 10px 15px rgba($color-akcent-1, 0.1);
+    }
+
+    &__logo {
+        display: block;
+        width: 100%;
+        max-width: 60%;
+        height: auto;
+        margin: auto;
+    }
+
+    @media (min-width: $screen-tablet) {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        min-height: 300px;
+        padding: 30px;
+        border-radius: 20px;
+        background: $color-white;
+        box-shadow: 0 10px 15px rgba($color-akcent-1, 0.1);
+        overflow: hidden;
+
+        &__title {
+            flex-basis: auto;
+            width: calc(100% - 200px - 20px);
+        }
+
+        &__desc {
+            align-self: flex-end;
+            flex-basis: auto;
+            width: calc(100% - 200px - 20px);
+            margin-bottom: 0;
+        }
+
+        &__footer {
+            justify-content: flex-end;
+            flex-basis: auto;
+            width: 200px;
+            padding-bottom: 0;
+        }
+
+        &__service {
+            flex-basis: auto;
+            width: 100%;
+            text-align: right;
+        }
+
+        &__images {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+        }
+
+        &__image {
+            display: block;
+            width: 200px;
+            min-width: 200px;
+            height: 200px;
+            min-height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        &__logo-wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @media (min-width: $screen-desktop) {
+        display: block;
+
+        &__title {
+            width: 100%;
+        }
+
+        &__desc {
+            width: 100%;
+        }
+
+        &__footer {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &__service {
+            text-align: left;
+        }
+
+        &__images {
+            position: relative;
+            top: 60px;
+            right: -60px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import "untils/variables";
+@import "common/global";
+
+// Header
+@import "common/header";
+@import "modules/nav";
+
+// Main
+@import "common/main";
+
+// Index
+@import "modules/hero";
+@import "modules/outsourcing";
+@import "modules/work-stages";
+@import "modules/estimation";
+@import "modules/cases";
+@import "modules/testimonials";
+@import "modules/faq";
+
+// Footer
+@import "common/footer";
+@import "modules/social";

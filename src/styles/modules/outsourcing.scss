@@ -1,0 +1,200 @@
+.outsourcing {
+    padding-bottom: 25px;
+
+    &__header {
+        display: flex;
+        margin-bottom: 38px;
+        border-radius: 45px;
+        background: rgba(#dbecf5, 0.5);
+        box-shadow: 0 10px 15px rgba($color-akcent-1-hover, 0.1);
+        overflow: hidden;
+    }
+
+    &__heading {
+        flex-basis: auto;
+        width: calc(100% / 3 - 4px / 3);
+        margin: 0;
+        margin-right: 2px;
+        text-align: center;
+        background: $color-white;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+    @media (min-width: $screen-tablet) {
+        &__header {
+            justify-content: space-between;
+            margin-bottom: 56px;
+            background: none;
+            box-shadow: none;
+            overflow: visible;
+        }
+    }
+
+    @media (min-width: $screen-desktop) {
+        padding-bottom: 60px;
+
+        &__inner {
+            display: flex;
+        }
+
+        &__header {
+            display: block;
+            flex-basis: auto;
+            width: calc(100% - 720px - 30px);
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+
+        &__body {
+            flex-basis: auto;
+            width: 720px;
+        }
+    }
+}
+
+.outsourcing-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+
+    &__text {
+        display: none;
+        font: bold 28px/1.2 $main-font;
+        color: $color-akcent-2;
+    }
+    
+    &__icon {
+        color: $color-akcent-1;
+    }
+
+    &.active {
+        background: $color-akcent-1;
+
+        .outsourcing-heading__icon {
+            color: $color-white;
+        }
+    }
+
+    @media (min-width: $screen-tablet) {
+        position: relative;
+        display: block;
+        width: auto;
+        height: auto;
+        text-align: left;
+        opacity: 0.25;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: calc(100% + 4px);
+            display: block;
+            width: 0;
+            height: 4px;
+            border-radius: 20px;
+            background: linear-gradient(to right, $color-akcent-2, $color-akcent-1);
+            transition: 0.3s ease-out;
+        }
+
+        &.active {
+            position: relative;
+            background: none;
+            opacity: 1;
+            cursor: default;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &__icon {
+            display: none;
+        }
+
+        &__text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    @media (min-width: $screen-desktop) {
+        margin-bottom: 21px;
+        transition: 0.3s ease-out;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &:not(.active):hover,
+        &:not(.active):focus,
+        &:not(.active):active {
+            opacity: 0.5;
+        }
+
+        &.active {
+            .outsourcing-heading__text {
+                &::after {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        &__text {
+            font-size: 40px;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 60px;
+                height: 20px;
+                margin-left: 30px;
+                vertical-align: middle;
+                background: url(../img/active-nav-link-arrow.svg) no-repeat center/60px 20px;
+                opacity: 0;
+                transition: 0.3s ease-out;
+                transform: translateX(-100%);
+            }
+        }
+    }
+}
+
+.outsourcing-section {
+    &__heading {
+        margin: 0 0 18px;
+        font: bold 28px/1.2 $main-font;
+        color: $color-akcent-1;
+    }
+
+    &__subheading {
+        margin: 0 0 24px;
+        font: bold 18px/1.45 $main-font;
+        color: #1b1c20;
+    }
+
+    &__desc {
+        margin: 0;
+        font: normal 14px/1.45 $main-font;
+        color: #1b1c20;
+    }
+
+    @media (min-width: $screen-tablet) {
+        &__heading {
+            font-size: 40px;
+        }
+    }
+
+    @media (min-width: $screen-desktop) {
+        &__heading {
+            margin-bottom: 28px;
+        }
+    }
+}

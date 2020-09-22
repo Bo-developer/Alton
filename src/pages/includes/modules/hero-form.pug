@@ -1,0 +1,38 @@
+form.hero-form(action="#")
+    fieldset.fieldset.hero-form__fieldset
+        legend.hero-form__legend Inquire About Your Next Trip!
+        p.hero-form__radio-row
+            label.label.label--radio.hero-form__label.hero-form__label--radio
+                input.input-radio.visually-hidden(type="radio" id="hero-one-way-trip" name="trip-type" value="One-Way" checked)
+                span One-Way
+            label.label.label--radio.hero-form__label.hero-form__label--radio
+                input.input-radio.visually-hidden(type="radio" id="hero-round-trip" name="trip-type" value="Round Trip")
+                span Round Trip
+        ul.hero-form__list
+            li.hero-form__item
+                label.label.hero-form__label
+                    input.input.hero-form__input(type="text" id="hero-departure-city" name="hero-departure-city" required)
+                    span Departure City*
+            li.hero-form__item.hero-form__item--btn
+                button.hero-form__btn(type="button")
+                    svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        circle(opacity='0.6', cx='16', cy='16', r='15.5', stroke='white')
+                        path(d='M18.1064 8L21.2343 11.1278L18.1064 14.2556', stroke='white', stroke-linecap='round', stroke-linejoin='round')
+                        path(d='M10.2852 11.1279H21.2325', stroke='white', stroke-linecap='round', stroke-linejoin='round')
+                        path(d='M13.4131 17.7446L10.2853 20.8725L13.4131 24.0003', stroke='white', stroke-linecap='round', stroke-linejoin='round')
+                        path(d='M21.2344 20.8721H10.287', stroke='white', stroke-linecap='round', stroke-linejoin='round')
+            li.hero-form__item
+                label.label.hero-form__label
+                    input.input.hero-form__input(type="text" id="hero-destination-city" name="hero-destination-city" required)
+                    span Destination City*
+            li.hero-form__item
+                label.label.hero-form__label
+                    input.input.hero-form__input.datepicker.departure-date(type="text" id="hero-departure-date" name="hero-departure-date" readonly required)
+                    span Departure Date*
+            li.hero-form__item.hero-form__item--hidden
+                label.label.hero-form__label
+                    input.input.hero-form__input.datepicker.return-date(type="text" id="hero-return-date" name="hero-return-date" readonly required)
+                    span Return Date*
+            li.hero-form__item
+                button.btn.btn--white.btn--ico.hero-form__submit(type="submit") NEXT STEP
+    

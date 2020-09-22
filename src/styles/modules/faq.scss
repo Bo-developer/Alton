@@ -1,0 +1,121 @@
+.faq {
+    padding: 24px 0;
+
+    &__item {
+        display: block;
+        padding: 27px 30px 24px;
+        text-align: center;
+        border-top: 1px solid rgba($color-akcent-1, 0.15);
+    }
+
+    &__title {
+        margin: 0 0 18px;
+        font: bold 18px/1.45 $main-font;
+        color: #1b1c20;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    &__text {
+        display: none;
+        font: normal 14px/1.58 $main-font;
+        text-align: left;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    @media (min-width: $screen-tablet) {
+        &__item {
+            position: relative;
+            padding: 30px 50px;
+            padding-right: 135px;
+        }
+    }
+
+    @media (min-width: $screen-desktop) {
+        padding-bottom: 61px;
+
+        &__item {
+            position: relative;
+            padding: 45px 50px 49px;
+        }
+
+        &__title {
+            max-width: 895px;
+            margin: 0 auto 18px;
+        }
+
+        &__text {
+            max-width: 895px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.faq-toggle {
+    position: relative;
+    margin-bottom: 23px;
+    padding: 0;
+    padding-left: calc(18px + 15px);
+    font: bold 14px/1.43 $main-font;
+    color: $color-akcent-1;
+    text-transform: uppercase;
+    border: none;
+    background: none;
+    outline: none;
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 18px;
+        height: 18px;
+        color: $color-akcent-1;
+        transition: 0.3s ease-out;
+        transform: translateY(-50%);
+    }
+    
+    &__icon-close {
+        opacity: 0;
+    }
+
+    &--active {
+        .faq-toggle__icon-open {
+            opacity: 0;
+            transform: translateY(-50%) scale(0.8) rotate(135deg);
+        }
+        .faq-toggle__icon-close {
+            opacity: 1;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-akcent-2;
+
+        .faq-toggle__icon {
+            color: $color-akcent-2;
+        }
+    }
+
+    &:active {
+        color: $color-akcent-2-hover;
+
+        .faq-toggle__icon {
+            color: $color-akcent-2-hover;
+        }
+    }
+
+    @media (min-width: $screen-tablet) {
+        position: absolute;
+        top: 36px;
+        right: 40px;
+
+        &__label {
+            display: none;
+        }
+    }
+}

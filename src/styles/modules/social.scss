@@ -1,0 +1,35 @@
+.social {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    &:hover,
+    &:focus {
+      .social__ico {
+        color: rgba($color-white, 0.85);
+      }
+    }
+
+    &:active {
+      .social__ico {
+        color: rgba($color-white, 0.75);
+      }
+    }
+  }
+
+  &__ico {
+    color: $color-white;
+    transition: 0.3s ease-out;
+  }
+}

@@ -1,0 +1,24 @@
+header.header 
+    .header__top
+      .header__inner.container
+        .header__links.header-links
+          ul.header-links__list
+            li.header-links__item
+              a.header-links__link(href="tel:+74991132086") +7 499 113 20 86
+            li.header-links__item
+              a.header-links__link(href="mailto:info@alton.pro") info@alton.pro
+        a.header__modal-link Задать вопрос
+
+    .header__bottom
+      .header__inner.container
+        .header__logo.logo
+          a.logo__link
+            img.logo__image(src="img/logo.svg" width="120" height="80" alt="Alton Современные IT решения - логотип")
+
+        button.header__nav-toggle.mobile-nav-toggle#tooggleNav(type="button" aria-label="Открыть/скрыть меню")
+          img.mobile-nav-toggle__icon.mobile-nav-toggle__open(src="img/hamburger.svg" width="40" height="30" alt="Иконка меню" aria-hidden="true")
+          img.mobile-nav-toggle__icon.mobile-nav-toggle__close(src="img/close-nav.svg" width="30" height="30" alt="Иконка закрытия меню" aria-hidden="true")
+
+        include ../includes/modules/nav
+
+        a.header__modal-btn.btn.btn--sm.btn--dark-gradient Задать вопрос
