@@ -11,6 +11,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
     <link href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
   </head>
   <body>
@@ -22,7 +23,7 @@
               <li class="header-links__item"><a class="header-links__link" href="tel:+74991132086">+7 499 113 20 86</a></li>
               <li class="header-links__item"><a class="header-links__link" href="mailto:info@alton.pro">info@alton.pro</a></li>
             </ul>
-          </div><a class="header__modal-link">Задать вопрос</a>
+          </div><a class="header__modal-link open-popup-link" href="#contacForm">Задать вопрос</a>
         </div>
       </div>
       <div class="header__bottom">
@@ -39,7 +40,7 @@
               <li class="nav__item active"><a class="nav__link" href="#">Услуги</a></li>
               <li class="nav__item"><a class="nav__link" href="#">Новости</a></li>
             </ul>
-          </nav><a class="header__modal-btn btn btn--sm btn--dark-gradient">Задать вопрос</a>
+          </nav><a class="header__modal-btn btn btn--sm btn--dark-gradient open-popup-link" href="#contacForm">Задать вопрос</a>
         </div>
       </div>
     </header>
@@ -48,7 +49,7 @@
         <div class="hero__inner container">
           <div class="hero__text">
             <p class="hero__heading">IT аутсорсинг</p>
-            <p class="hero__desc">Межзвездная матеpия параллельна. Как было показано выше, радиант традиционно вызывает ионный хвост, однако большинство спутников движутся вокруг своих планет в ту же сторону, в какую вращаются планеты.</p><a class="hero__link btn" href="#">Рассчитать стоимость</a>
+            <p class="hero__desc">Межзвездная матеpия параллельна. Как было показано выше, радиант традиционно вызывает ионный хвост, однако большинство спутников движутся вокруг своих планет в ту же сторону, в какую вращаются планеты.</p><a class="hero__link btn open-popup-link" href="#contacForm">Рассчитать стоимость</a>
           </div>
           <div class="hero__media">
             <div class="hero__image-wrap"><img class="hero__image" src="img/hero-image.jpg" width="400" height="400" alt="Gggg"><img class="hero__image-big" src="img/hero-big.jpg" width="720" height="720" alt="Gggg"></div>
@@ -433,7 +434,7 @@
             <ul class="footer-contacts__list">
               <li class="footer-contacts__item"><a class="footer-contacts__link footer-contacts__link--big" href="tel:+74991132086">+7 499 113 20 86</a></li>
               <li class="footer-contacts__item"><a class="footer-contacts__link" href="mailto:info@alton.pro">info@alton.pro</a></li>
-            </ul><a class="footer-contacts__modal-btn btn btn--sm btn--light-gradient">Задать вопрос</a>
+            </ul><a class="footer-contacts__modal-btn btn btn--sm btn--light-gradient open-popup-link" href="#contacForm">Задать вопрос</a>
           </div>
           <div class="footer__social social">
             <ul class="social__list">
@@ -458,10 +459,45 @@
         </div>
         <p class="copyright">Copyright &copy; 2020. All rights reserved</p>
       </div>
+      <div class="contact-form mfp-hide" id="contacForm">
+        <button class="mfp-close" title="Close (Esc)" type="button" aria-label="Закрыть форму отправки"></button>
+        <form class="contact-form__form">
+          <div class="contact-form__inner">
+            <div class="section-header section-header--light">
+              <p class="section-header__preheading">Сделать заказ</p>
+              <h2 class="section-header__heading faq__heading">Отправьте заявку</h2>
+            </div>
+            <ul class="contact-form__list">
+              <li class="contact-form__item">
+                <label class="contact-form__label label"><span>Ваше имя</span>
+                  <input class="contact-form__input input" type="text" placeholder="Александр Александров">
+                </label>
+              </li>
+              <li class="contact-form__item">
+                <label class="contact-form__label label"><span>Телефон</span>
+                  <input class="contact-form__input input" type="tel" placeholder="+7 916 101 22 33">
+                </label>
+              </li>
+              <li class="contact-form__item">
+                <label class="contact-form__label label"><span>E-mail</span>
+                  <input class="contact-form__input input" type="email" placeholder="a.aleksandrov@mail.ru">
+                </label>
+              </li>
+              <li class="contact-form__item">
+                <label class="contact-form__label label label--checkbox">
+                  <input class="contact-form__input visually-hidden checkbox" type="checkbox" checked><b>Даю согласие на обработку моих персональных данных</b>
+                </label>
+              </li>
+            </ul>
+            <button class="btn btn--md btn--light-gradient" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://wowjs.uk/dist/wow.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

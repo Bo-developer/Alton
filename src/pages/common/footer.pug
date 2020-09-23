@@ -46,8 +46,10 @@ footer.footer
             a.footer-contacts__link.footer-contacts__link--big(href="tel:+74991132086") +7 499 113 20 86
           li.footer-contacts__item
             a.footer-contacts__link(href="mailto:info@alton.pro") info@alton.pro
-        a.footer-contacts__modal-btn.btn.btn--sm.btn--light-gradient Задать вопрос
+        a.footer-contacts__modal-btn.btn.btn--sm.btn--light-gradient.open-popup-link(href="#contacForm") Задать вопрос
 
       include ../includes/modules/social
 
     p.copyright Copyright &copy; 2020. All rights reserved
+
+  include ../includes/modules/contact-form

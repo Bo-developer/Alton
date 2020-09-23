@@ -105,3 +105,7 @@ $('.cases__list').slick({
     }
   ]
 });
+
+
+// Popup
+$('.open-popup-link').magnificPopup();

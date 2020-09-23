@@ -105,6 +105,16 @@ ol {
     text-align: center;
   }
 
+  &--light {
+    .section-header__preheading {
+      color: rgba($color-white, 0.25);
+    }
+
+    .section-header__heading {
+      color: $color-white;
+    }
+  }
+
   @media (min-width: $screen-tablet) {
     margin-bottom: 29px;
 
@@ -135,6 +145,7 @@ ol {
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
+  border: none;
   border-radius: 40px;
   background: $color-akcent-1;
   box-shadow: 0 10px 50px rgba($color-akcent-1, 0.75);
@@ -199,36 +210,17 @@ ol {
 
 // ---======   Form   ======--- //
 
-.fieldset {
-  width: 100%;
-  min-width: 100%;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
 .label {
   position: relative;
   display: block;
-  font: normal 16px/1 $main-font;
-  color: rgba(255, 255, 255, 0.8);
+  font: bold 14px/1.43 $main-font;
+  color: $color-white;
   cursor: pointer;
   user-select: none;
 
   span {
-    position: absolute;
-    top: 10px;
-    left: 0;
     display: block;
-    width: 100%;
-    transition: 0.3s ease-out;
-  }
-
-  &--radio {
-    
-    span {
-      position: static;
-    }
+    padding: 10px 30px;
   }
 
   &--checkbox {
@@ -236,9 +228,8 @@ ol {
     b {
       position: relative;
       display: block;
-      font-weight: normal;
       padding: 15px 0;
-      padding-left: 25px;
+      padding-left: 39px;
 
       &:before {
         content: '';
@@ -246,16 +237,12 @@ ol {
         top: 15px;
         left: 0;
         display: block;
-        width: 15px;
-        height: 15px;
-        border: 3px solid rgba(35, 113, 94, 0.3);
+        width: 24px;
+        height: 24px;
+        border: 4px solid rgba($color-white, 0.25);
+        border-radius: 50%;
         transition: 0.3s ease-out;
       }
-    }
-
-    span {
-      top: -15px;
-      font-size: 14px;
     }
   }
 }
@@ -263,35 +250,24 @@ ol {
 .input {
   display: block;
   width: 100%;
-  height: 45px;
-  font: normal 16px/1 $main-font;
-  color: #23715E;
-  border: none;
-  border-bottom: 1px solid rgba(35, 113, 94, 0.3);
+  height: 60px;
+  padding: 0 25px;
+  font: normal 20px/1 $main-font;
+  color: $color-white;
+  border: 4px solid rgba($color-white, 0.25);
+  border-radius: 30px;
   background: transparent;
+  outline: none;
   transition: 0.3s ease-out;
 
+  @include placeholder($color-white);
+
   &:focus {
-    outline: none;
-    border-color: rgba(35, 113, 94, 1);
-
-    & + span {
-      top: -15px;
-      font-size: 14px;
-    }
+    border-color: rgba($color-white, 0.75);
   }
 
-  &.filled + span {
-    top: -15px;
-    font-size: 14px;
-  }
-}
-
-.input-radio {
-  
-  &:checked + span {
-    background: #087C60;
-    border-color: rgba(35, 113, 94, 1);
+  &:active {
+    border-color: $color-white;
   }
 }
 
@@ -300,17 +276,13 @@ ol {
   &:checked + b {
     
     &:after {
-      content: '\2713';
+      content: '';
       position: absolute;
-      top: 15px;
-      left: 2px;
-      font-weight: bold;
-      font-size: 14px;
-      color: #fff;
-    }
-
-    &:before {
-      background: #087C60;
+      top: 14px;
+      left: 6px;
+      width: 23px;
+      height: 19px;
+      background: url(../img/checkbox-checkmark.svg) no-repeat center/cover;
     }
   }
 }
@@ -338,24 +310,6 @@ ol {
   & + span {
     top: -15px;
     font-size: 14px;
-  }  
-}
-
-.textarea {
-  display: block;
-  width: 100%;
-  min-height: 125px;
-  max-height: 300px;
-  padding: 20px 10px;
-  font: normal 16px/1 $main-font;
-  color: #23715E;
-  background: #fff;
-  border: 1px solid rgba(35,113,94,.3);
-  resize: vertical;
-
-  &:focus {
-    outline: none;
-    border-color: rgba(35, 113, 94, 1);
   }  
 }
 

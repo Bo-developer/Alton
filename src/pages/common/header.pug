@@ -7,7 +7,7 @@ header.header
               a.header-links__link(href="tel:+74991132086") +7 499 113 20 86
             li.header-links__item
               a.header-links__link(href="mailto:info@alton.pro") info@alton.pro
-        a.header__modal-link Задать вопрос
+        a.header__modal-link.open-popup-link(href="#contacForm") Задать вопрос
 
     .header__bottom
       .header__inner.container
@@ -21,4 +21,4 @@ header.header
 
         include ../includes/modules/nav
 
-        a.header__modal-btn.btn.btn--sm.btn--dark-gradient Задать вопрос
+        a.header__modal-btn.btn.btn--sm.btn--dark-gradient.open-popup-link(href="#contacForm") Задать вопрос

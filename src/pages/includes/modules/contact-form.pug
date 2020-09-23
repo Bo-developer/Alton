@@ -1,0 +1,26 @@
+.contact-form.mfp-hide#contacForm
+    button(title="Close (Esc)" type="button" class="mfp-close" aria-label="Закрыть форму отправки")
+
+    form.contact-form__form
+        .contact-form__inner
+            .section-header.section-header--light
+                p.section-header__preheading Сделать заказ
+                h2.section-header__heading.faq__heading Отправьте заявку
+            ul.contact-form__list
+                li.contact-form__item
+                    label.contact-form__label.label
+                        span Ваше имя
+                        input.contact-form__input.input(type="text" placeholder="Александр Александров")
+                li.contact-form__item
+                    label.contact-form__label.label
+                        span Телефон
+                        input.contact-form__input.input(type="tel" placeholder="+7 916 101 22 33")
+                li.contact-form__item
+                    label.contact-form__label.label
+                        span E-mail
+                        input.contact-form__input.input(type="email" placeholder="a.aleksandrov@mail.ru")
+                li.contact-form__item
+                    label.contact-form__label.label.label--checkbox
+                        input.contact-form__input.visually-hidden.checkbox(type="checkbox" checked)
+                        b Даю согласие на обработку моих персональных данных
+            button.btn.btn--md.btn--light-gradient(type="submit") Отправить
